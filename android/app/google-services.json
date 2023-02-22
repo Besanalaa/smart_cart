@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "897329169251",
+    "project_id": "auth-tutorial-da10c",
+    "storage_bucket": "auth-tutorial-da10c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897329169251:android:bd2d0c1a6fe1296d0ec956",
+        "android_client_info": {
+          "package_name": "com.example.besan_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897329169251-ms8m5v1k0ifgoljoua82goshl65hbn3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7mkpxW36QrLYJMYtQ5GZBBPTdRDQV9zU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897329169251-ms8m5v1k0ifgoljoua82goshl65hbn3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
