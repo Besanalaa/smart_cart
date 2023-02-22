@@ -16,7 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
-  void signUserIn() async {
+  Future signUserIn() async {
     showDialog(
         context: context,
         builder: (context) {
@@ -54,6 +54,13 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   @override
+  void dispose () {
+    super.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
@@ -63,9 +70,10 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
+                Icon(
                   Icons.lock,
                   size: 80,
+                  color: Colors.deepPurple.shade300.withOpacity(0.8),
                 ),
                 const SizedBox(height: 20),
                 Text(
@@ -106,9 +114,19 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 15),
-                MyButton(
-                  onTap: signUserIn,
-                  text: 'Sign In',
+                SizedBox(
+                  width: 350,
+                  height: 60,
+                  child: ElevatedButton(
+                    onPressed: signUserIn,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.deepPurple.shade300.withOpacity(0.8),
+                      side: BorderSide.none,
+                      shape: const StadiumBorder(),
+                    ),
+                    child: const Text(
+                        'Sign In', style: TextStyle(fontSize: 20)),
+                  ),
                 ),
                 const SizedBox(height: 40),
                 Padding(

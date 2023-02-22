@@ -65,35 +65,35 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ),
         ),
       ),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 50),
-          child: SizedBox(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            child: Center(
-              child: Column(
-                children: [
-                  Text(
-                    'Welcome to The Smart Cart App..',
-                    style: GoogleFonts.sansita(
-                        fontSize: 30, fontWeight: FontWeight.bold
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 50),
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              child: Center(
+                child: Column(
+                  children: [
+                    Text(
+                      'Welcome to The Smart Cart App..',
+                      style: GoogleFonts.sansita(
+                          fontSize: 30, fontWeight: FontWeight.bold
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 80),
-                  SingleChildScrollView(
-                    child: Lottie.asset('assets/images/shopping-cart.json',
+                    const SizedBox(height: 80),
+                    Lottie.asset('assets/images/shopping-cart.json',
                       height: 300
                     ),
-                  ),
-                  const SizedBox(height: 100),
-                  Text(
-                    '"Scan the QR and get your own Cart now!"',
-                    style: GoogleFonts.sansita(
-                        fontSize: 20,
+                    const SizedBox(height: 100),
+                    Text(
+                      '"Scan the QR and get your own Cart now!"',
+                      style: GoogleFonts.sansita(
+                          fontSize: 20,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
